@@ -1,0 +1,18 @@
+package com.study.springboot;
+
+public class JspController {
+	@RequestMapping("/")
+	public @ResponseBody String root() {
+		return "JSP";
+	}
+	
+	@RequestMapping("/test1")
+	public String test1() {
+		return "test";
+	}
+	
+	@RequestMapping("/test2")
+	public String test2() {
+		return "sub/test1";
+	}
+}

@@ -1,0 +1,27 @@
+package com.study.springboot;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+
+
+@Controller
+public class FormController {
+	@RequestMapping("/")
+	public String root() {
+		return "form";
+	}
+	
+	@RequestMapping("/test1")
+	public String test1(HttpServletRequest httpServletRequest, Model model) {
+		String age = httpServletRequest.getParameter("age");
+		String name = httpServletRequest.getParameter("name");
+		
+		model.addAttribute("age",age);
+		model.addAttribute("name",name);
+		return "test1";
+	}
+}

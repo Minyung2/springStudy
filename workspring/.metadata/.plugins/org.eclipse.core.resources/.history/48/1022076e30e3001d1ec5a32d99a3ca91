@@ -1,0 +1,6 @@
+package com.study.springboot;
+
+public class PersonDto {
+	private String name;
+	private String age;
+}

@@ -1,0 +1,19 @@
+package com.study.springboot;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpServlet;
+
+@Controller
+public class FormController {
+	@RequestMapping("/")
+	public String root() {
+		return "form";
+	}
+	
+	@RequestMapping("/test1")
+	public String test1(HttpServlet httpServletRequest, Model model) {
+		
+	}
+}
