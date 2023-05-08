@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>A....Array start at 1</title>
+</head>
+<body>
+
+<table style="border:2px black solid; background:black; border-radius:20px;">
+    <tr th:each="entry,status:${items}" th:style="${status.odd}?'color:red;':'color:blue;'">
+        <td th:text="${entry.key}"></td>
+        <td>[[${entry.value.itemNm}]]</td>
+        <td th:text="${#strings.replace(entry.value.itemDetail,'더미','테스트')}"></td>
+        <td th:text="${entry.value.price}"></td>
+        <td th:text="${#strings.substring(entry.value.regTime,0,4)+'년'}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
